@@ -1,0 +1,36 @@
+# Ignore raw video files (very large media assets)
+raw_videos/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+
+# OS metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python & Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+.ipynb_checkpoints/
+
+# Pipeline execution outputs and large archives
+outputs/
+runs/
+SwSL_JCTA_Revision/
+swsl_results.zip
+swsl_release_bundle.zip
+*.tar.gz
