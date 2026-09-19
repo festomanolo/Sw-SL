@@ -30,7 +30,7 @@ ENV/
 # Pipeline execution outputs and large archives
 outputs/
 runs/
-SwSL_JCTA_Revision/
+checkpoints/
 swsl_results.zip
 swsl_release_bundle.zip
 *.tar.gz
