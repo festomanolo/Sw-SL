@@ -66,67 +66,162 @@
   },
   {
     "cycle": 2,
-    "timestamp": "2026-09-19 07:29:59 UTC",
-    "runner": "Linux",
-    "python_version": "3.10.21",
+    "timestamp": "2026-09-19 07:36:03 UTC",
+    "seed": 1789725009,
+    "runner": "Darwin",
     "top_model": "BiLSTM + Attention (Proposed)",
-    "top_accuracy": 96.94,
-    "top_f1": 96.74,
+    "top_accuracy": 97.12,
+    "top_f1": 97.0,
+    "top_p95_latency": 5.5,
+    "top_gflops": 1.21,
+    "signer_drift": 2.35,
+    "anomaly": false,
     "models": [
       {
         "architecture": "BiLSTM + Attention (Proposed)",
         "tier": "Proposed Master Architecture",
         "parameters": 604551,
-        "accuracy": 96.94,
-        "macro_f1": 96.74,
-        "latency_ms": 4.79,
-        "status": "OPTIMAL"
+        "mmacs": 71.2,
+        "gflops": 1.21,
+        "accuracy": 97.12,
+        "macro_f1": 97.0,
+        "p50_latency_ms": 4.57,
+        "p95_latency_ms": 5.5,
+        "rtf": 0.0023,
+        "throughput_fps": 13080,
+        "chi2_stat": 0.0,
+        "raw_p_val": 1.0,
+        "status": "OPTIMAL",
+        "adj_p_val": 1.0,
+        "stat_sig": false
       },
       {
         "architecture": "BiGRU + Additive Attention",
         "tier": "Recurrent Baseline",
         "parameters": 453120,
-        "accuracy": 94.58,
-        "macro_f1": 93.14,
-        "latency_ms": 4.32,
-        "status": "OPTIMAL"
+        "mmacs": 53.4,
+        "gflops": 0.91,
+        "accuracy": 94.89,
+        "macro_f1": 94.65,
+        "p50_latency_ms": 4.1,
+        "p95_latency_ms": 4.93,
+        "rtf": 0.002,
+        "throughput_fps": 14580,
+        "chi2_stat": 1.7778,
+        "raw_p_val": 0.18242243945173575,
+        "status": "OPTIMAL",
+        "adj_p_val": 0.29783,
+        "stat_sig": false
       },
       {
         "architecture": "ST-GCN (Spatial-Temporal Graph)",
         "tier": "Graph Convolution",
         "parameters": 512800,
-        "accuracy": 94.03,
-        "macro_f1": 93.64,
-        "latency_ms": 7.51,
-        "status": "OPTIMAL"
+        "mmacs": 49.8,
+        "gflops": 0.84,
+        "accuracy": 94.17,
+        "macro_f1": 93.84,
+        "p50_latency_ms": 7.29,
+        "p95_latency_ms": 8.63,
+        "rtf": 0.0036,
+        "throughput_fps": 8220,
+        "chi2_stat": 2.0833,
+        "raw_p_val": 0.14891467317876567,
+        "status": "OPTIMAL",
+        "adj_p_val": 0.29783,
+        "stat_sig": false
       },
       {
         "architecture": "Transformer Sequence Encoder",
         "tier": "Attention Baseline",
         "parameters": 789400,
-        "accuracy": 92.9,
-        "macro_f1": 92.99,
-        "latency_ms": 5.86,
-        "status": "OPTIMAL"
+        "mmacs": 86.5,
+        "gflops": 1.47,
+        "accuracy": 92.46,
+        "macro_f1": 92.12,
+        "p50_latency_ms": 5.65,
+        "p95_latency_ms": 6.86,
+        "rtf": 0.0028,
+        "throughput_fps": 10560,
+        "chi2_stat": 2.7692,
+        "raw_p_val": 0.09609232945567328,
+        "status": "OPTIMAL",
+        "adj_p_val": 0.28828,
+        "stat_sig": false
       },
       {
         "architecture": "TCN (Temporal Convolutional Network)",
         "tier": "Temporal Convolution",
         "parameters": 342150,
-        "accuracy": 91.11,
-        "macro_f1": 91.16,
-        "latency_ms": 3.77,
-        "status": "OPTIMAL"
+        "mmacs": 24.6,
+        "gflops": 0.42,
+        "accuracy": 91.38,
+        "macro_f1": 91.13,
+        "p50_latency_ms": 3.55,
+        "p95_latency_ms": 4.33,
+        "rtf": 0.0018,
+        "throughput_fps": 16860,
+        "chi2_stat": 4.2667,
+        "raw_p_val": 0.03886710381241724,
+        "status": "OPTIMAL",
+        "adj_p_val": 0.15547,
+        "stat_sig": false
       },
       {
         "architecture": "Vanilla BiLSTM (No Attention)",
         "tier": "Ablation Baseline",
         "parameters": 587911,
-        "accuracy": 88.33,
-        "macro_f1": 87.94,
-        "latency_ms": 4.57,
-        "status": "DRIFT_WARN"
+        "mmacs": 69.8,
+        "gflops": 1.18,
+        "accuracy": 87.95,
+        "macro_f1": 87.69,
+        "p50_latency_ms": 4.35,
+        "p95_latency_ms": 5.23,
+        "rtf": 0.0022,
+        "throughput_fps": 13740,
+        "chi2_stat": 9.3889,
+        "raw_p_val": 0.0021830447373622545,
+        "status": "DEGRADED",
+        "adj_p_val": 0.01092,
+        "stat_sig": true
       }
-    ]
+    ],
+    "per_class": {
+      "baba": {
+        "precision": 94.8,
+        "recall": 100.0,
+        "f1": 97.3
+      },
+      "habari": {
+        "precision": 99.6,
+        "recall": 94.0,
+        "f1": 96.7
+      },
+      "hedhi": {
+        "precision": 94.0,
+        "recall": 94.0,
+        "f1": 94.0
+      },
+      "kula": {
+        "precision": 99.9,
+        "recall": 94.3,
+        "f1": 97.0
+      },
+      "mama": {
+        "precision": 94.8,
+        "recall": 100.0,
+        "f1": 97.3
+      },
+      "nenda": {
+        "precision": 94.6,
+        "recall": 94.6,
+        "f1": 94.6
+      },
+      "njema": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0
+      }
+    }
   }
 ]
