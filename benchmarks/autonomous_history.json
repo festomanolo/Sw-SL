@@ -1,0 +1,67 @@
+[
+  {
+    "cycle": 1,
+    "timestamp": "2026-09-19 07:28:59 UTC",
+    "runner": "Darwin",
+    "python_version": "3.12.8",
+    "top_model": "BiLSTM + Attention (Proposed)",
+    "top_accuracy": 96.79,
+    "top_f1": 96.71,
+    "models": [
+      {
+        "architecture": "BiLSTM + Attention (Proposed)",
+        "tier": "Proposed Master Architecture",
+        "parameters": 604551,
+        "accuracy": 96.79,
+        "macro_f1": 96.71,
+        "latency_ms": 5.22,
+        "status": "OPTIMAL"
+      },
+      {
+        "architecture": "BiGRU + Additive Attention",
+        "tier": "Recurrent Baseline",
+        "parameters": 453120,
+        "accuracy": 94.29,
+        "macro_f1": 93.95,
+        "latency_ms": 4.88,
+        "status": "OPTIMAL"
+      },
+      {
+        "architecture": "ST-GCN (Spatial-Temporal Graph)",
+        "tier": "Graph Convolution",
+        "parameters": 512800,
+        "accuracy": 93.34,
+        "macro_f1": 93.43,
+        "latency_ms": 7.77,
+        "status": "OPTIMAL"
+      },
+      {
+        "architecture": "Transformer Sequence Encoder",
+        "tier": "Attention Baseline",
+        "parameters": 789400,
+        "accuracy": 92.28,
+        "macro_f1": 92.91,
+        "latency_ms": 6.85,
+        "status": "OPTIMAL"
+      },
+      {
+        "architecture": "TCN (Temporal Convolutional Network)",
+        "tier": "Temporal Convolution",
+        "parameters": 342150,
+        "accuracy": 90.8,
+        "macro_f1": 90.68,
+        "latency_ms": 4.29,
+        "status": "OPTIMAL"
+      },
+      {
+        "architecture": "Vanilla BiLSTM (No Attention)",
+        "tier": "Ablation Baseline",
+        "parameters": 587911,
+        "accuracy": 88.14,
+        "macro_f1": 87.6,
+        "latency_ms": 6.26,
+        "status": "DRIFT_WARN"
+      }
+    ]
+  }
+]

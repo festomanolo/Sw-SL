@@ -4,6 +4,8 @@
 [![TensorFlow 2.16+](https://img.shields.io/badge/TensorFlow-2.16+-orange.svg)](https://tensorflow.org/)
 [![Keras 3](https://img.shields.io/badge/Keras-3.0+-red.svg)](https://keras.io/)
 [![Colab Ready](https://img.shields.io/badge/Colab-Ready-yellow.svg)](https://colab.research.google.com/)
+[![Autonomous Pipeline](https://img.shields.io/badge/Autonomous_Pipeline-Active_24%2F7-brightgreen?style=flat-square&logo=githubactions)](https://github.com/festomanolo/Sw-SL/actions)
+[![Leaderboard](https://img.shields.io/badge/Leaderboard-Live-blue?style=flat-square)](LEADERBOARD.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 An end-to-end deep learning pipeline for Swahili Sign Language (SwSL) recognition. The system leverages landmark coordinate extraction, bidirectional recurrent networks with additive attention, comprehensive baselines (GCN, TCN, Transformers, 3D CNNs), and real-time speech synthesis.
@@ -13,11 +15,16 @@ An end-to-end deep learning pipeline for Swahili Sign Language (SwSL) recognitio
 ## 📂 Repository Structure
 
 ```
-├── README.md                     # Main project documentation and overview
-├── README_TRAINING.md            # Execution guide & Google Colab instructions
-├── SwSL_Master_Pipeline.ipynb    # Master reproducible pipeline (12 models, 23 ablations)
-├── SwSL_Training_Pipeline.ipynb  # Baseline training pipeline
-└── .gitignore                    # Excludes large media assets, outputs, and checkpoints
+├── README.md                          # Main project documentation and overview
+├── LEADERBOARD.md                     # Live autonomous model zoo evaluation leaderboard
+├── README_TRAINING.md                 # Execution guide & Google Colab instructions
+├── SwSL_Master_Pipeline.ipynb         # Master reproducible pipeline (12 models, 23 ablations)
+├── SwSL_Training_Pipeline.ipynb       # Baseline training pipeline
+├── scripts/
+│   └── autonomous_benchmark.py       # Autonomous continuous evaluation engine
+├── benchmarks/                        # Persistent autonomous verification history
+└── .github/workflows/
+    └── autonomous_pipeline.yml        # Scheduled 24/7 CI/CD automation workflow
 ```
 
 > ℹ️ **Dataset Note:** Raw video files (`raw_videos/`, ~961 MB) are excluded from the repository. Landmark extraction runs directly on raw clips or uses the landmark bundle generated in the pipeline (`swsl_release_bundle.zip`).
