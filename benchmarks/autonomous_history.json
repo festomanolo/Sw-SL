@@ -2143,5 +2143,165 @@
         "f1": 100.0
       }
     }
+  },
+  {
+    "cycle": 15,
+    "timestamp": "2026-09-22 11:04:58 UTC",
+    "seed": 1789237421,
+    "runner": "Linux",
+    "top_model": "BiLSTM + Attention (Proposed)",
+    "top_accuracy": 96.95,
+    "top_f1": 96.82,
+    "top_p95_latency": 5.48,
+    "top_gflops": 1.21,
+    "signer_drift": 2.21,
+    "anomaly": false,
+    "models": [
+      {
+        "architecture": "BiLSTM + Attention (Proposed)",
+        "tier": "Proposed Master Architecture",
+        "parameters": 604551,
+        "mmacs": 71.2,
+        "gflops": 1.21,
+        "accuracy": 96.95,
+        "macro_f1": 96.82,
+        "p50_latency_ms": 4.56,
+        "p95_latency_ms": 5.48,
+        "rtf": 0.0023,
+        "throughput_fps": 13140,
+        "chi2_stat": 0.0,
+        "raw_p_val": 1.0,
+        "status": "OPTIMAL",
+        "adj_p_val": 1.0,
+        "stat_sig": false
+      },
+      {
+        "architecture": "BiGRU + Additive Attention",
+        "tier": "Recurrent Baseline",
+        "parameters": 453120,
+        "mmacs": 53.4,
+        "gflops": 0.91,
+        "accuracy": 94.25,
+        "macro_f1": 93.98,
+        "p50_latency_ms": 4.09,
+        "p95_latency_ms": 4.91,
+        "rtf": 0.002,
+        "throughput_fps": 14640,
+        "chi2_stat": 1.7778,
+        "raw_p_val": 0.18242243945173575,
+        "status": "OPTIMAL",
+        "adj_p_val": 0.29783,
+        "stat_sig": false
+      },
+      {
+        "architecture": "ST-GCN (Spatial-Temporal Graph)",
+        "tier": "Graph Convolution",
+        "parameters": 512800,
+        "mmacs": 49.8,
+        "gflops": 0.84,
+        "accuracy": 93.86,
+        "macro_f1": 93.53,
+        "p50_latency_ms": 7.28,
+        "p95_latency_ms": 8.61,
+        "rtf": 0.0036,
+        "throughput_fps": 8220,
+        "chi2_stat": 2.0833,
+        "raw_p_val": 0.14891467317876567,
+        "status": "OPTIMAL",
+        "adj_p_val": 0.29783,
+        "stat_sig": false
+      },
+      {
+        "architecture": "Transformer Sequence Encoder",
+        "tier": "Attention Baseline",
+        "parameters": 789400,
+        "mmacs": 86.5,
+        "gflops": 1.47,
+        "accuracy": 92.75,
+        "macro_f1": 92.42,
+        "p50_latency_ms": 5.64,
+        "p95_latency_ms": 6.84,
+        "rtf": 0.0028,
+        "throughput_fps": 10620,
+        "chi2_stat": 2.7692,
+        "raw_p_val": 0.0960923294556733,
+        "status": "OPTIMAL",
+        "adj_p_val": 0.28828,
+        "stat_sig": false
+      },
+      {
+        "architecture": "TCN (Temporal Convolutional Network)",
+        "tier": "Temporal Convolution",
+        "parameters": 342150,
+        "mmacs": 24.6,
+        "gflops": 0.42,
+        "accuracy": 91.13,
+        "macro_f1": 90.87,
+        "p50_latency_ms": 3.54,
+        "p95_latency_ms": 4.31,
+        "rtf": 0.0018,
+        "throughput_fps": 16920,
+        "chi2_stat": 4.2667,
+        "raw_p_val": 0.03886710381241724,
+        "status": "OPTIMAL",
+        "adj_p_val": 0.15547,
+        "stat_sig": false
+      },
+      {
+        "architecture": "Vanilla BiLSTM (No Attention)",
+        "tier": "Ablation Baseline",
+        "parameters": 587911,
+        "mmacs": 69.8,
+        "gflops": 1.18,
+        "accuracy": 88.1,
+        "macro_f1": 87.85,
+        "p50_latency_ms": 4.34,
+        "p95_latency_ms": 5.21,
+        "rtf": 0.0022,
+        "throughput_fps": 13800,
+        "chi2_stat": 9.3889,
+        "raw_p_val": 0.002183044737362255,
+        "status": "DEGRADED",
+        "adj_p_val": 0.01092,
+        "stat_sig": true
+      }
+    ],
+    "per_class": {
+      "baba": {
+        "precision": 94.9,
+        "recall": 100.0,
+        "f1": 97.4
+      },
+      "habari": {
+        "precision": 100.0,
+        "recall": 94.6,
+        "f1": 97.2
+      },
+      "hedhi": {
+        "precision": 94.5,
+        "recall": 94.5,
+        "f1": 94.5
+      },
+      "kula": {
+        "precision": 100.0,
+        "recall": 94.8,
+        "f1": 97.3
+      },
+      "mama": {
+        "precision": 95.3,
+        "recall": 100.0,
+        "f1": 97.6
+      },
+      "nenda": {
+        "precision": 94.4,
+        "recall": 94.4,
+        "f1": 94.4
+      },
+      "njema": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0
+      }
+    }
   }
 ]
