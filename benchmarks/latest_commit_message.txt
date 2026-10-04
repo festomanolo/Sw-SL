@@ -1,1 +1,1 @@
-perf(eval): cycle #57 — BiLSTM+Attn: 97.13% | p95 latency: 5.22ms (RTF: 0.0022) | 1.21 GFLOPs | seed 9862 [skip ci]
+perf(eval): cycle #58 — BiLSTM+Attn: 96.43% | p95 latency: 5.31ms (RTF: 0.0022) | 1.21 GFLOPs | seed 4562 [skip ci]
