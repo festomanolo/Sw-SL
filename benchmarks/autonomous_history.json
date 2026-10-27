@@ -1,165 +1,5 @@
 [
   {
-    "cycle": 39,
-    "timestamp": "2026-09-28 13:06:06 UTC",
-    "seed": 1787049201,
-    "runner": "Linux",
-    "top_model": "BiLSTM + Attention (Proposed)",
-    "top_accuracy": 96.3,
-    "top_f1": 96.14,
-    "top_p95_latency": 5.33,
-    "top_gflops": 1.21,
-    "signer_drift": 2.34,
-    "anomaly": false,
-    "models": [
-      {
-        "architecture": "BiLSTM + Attention (Proposed)",
-        "tier": "Proposed Master Architecture",
-        "parameters": 604551,
-        "mmacs": 71.2,
-        "gflops": 1.21,
-        "accuracy": 96.3,
-        "macro_f1": 96.14,
-        "p50_latency_ms": 4.46,
-        "p95_latency_ms": 5.33,
-        "rtf": 0.0022,
-        "throughput_fps": 13440,
-        "chi2_stat": 0.0,
-        "raw_p_val": 1.0,
-        "status": "OPTIMAL",
-        "adj_p_val": 1.0,
-        "stat_sig": false
-      },
-      {
-        "architecture": "BiGRU + Additive Attention",
-        "tier": "Recurrent Baseline",
-        "parameters": 453120,
-        "mmacs": 53.4,
-        "gflops": 0.91,
-        "accuracy": 94.16,
-        "macro_f1": 93.89,
-        "p50_latency_ms": 3.99,
-        "p95_latency_ms": 4.76,
-        "rtf": 0.002,
-        "throughput_fps": 15000,
-        "chi2_stat": 1.7778,
-        "raw_p_val": 0.18242243945173575,
-        "status": "OPTIMAL",
-        "adj_p_val": 0.29783,
-        "stat_sig": false
-      },
-      {
-        "architecture": "ST-GCN (Spatial-Temporal Graph)",
-        "tier": "Graph Convolution",
-        "parameters": 512800,
-        "mmacs": 49.8,
-        "gflops": 0.84,
-        "accuracy": 93.39,
-        "macro_f1": 93.03,
-        "p50_latency_ms": 7.18,
-        "p95_latency_ms": 8.46,
-        "rtf": 0.0036,
-        "throughput_fps": 8340,
-        "chi2_stat": 2.0833,
-        "raw_p_val": 0.14891467317876567,
-        "status": "OPTIMAL",
-        "adj_p_val": 0.29783,
-        "stat_sig": false
-      },
-      {
-        "architecture": "Transformer Sequence Encoder",
-        "tier": "Attention Baseline",
-        "parameters": 789400,
-        "mmacs": 86.5,
-        "gflops": 1.47,
-        "accuracy": 92.61,
-        "macro_f1": 92.27,
-        "p50_latency_ms": 5.54,
-        "p95_latency_ms": 6.69,
-        "rtf": 0.0028,
-        "throughput_fps": 10800,
-        "chi2_stat": 2.7692,
-        "raw_p_val": 0.0960923294556733,
-        "status": "OPTIMAL",
-        "adj_p_val": 0.28828,
-        "stat_sig": false
-      },
-      {
-        "architecture": "TCN (Temporal Convolutional Network)",
-        "tier": "Temporal Convolution",
-        "parameters": 342150,
-        "mmacs": 24.6,
-        "gflops": 0.42,
-        "accuracy": 90.89,
-        "macro_f1": 90.63,
-        "p50_latency_ms": 3.44,
-        "p95_latency_ms": 4.16,
-        "rtf": 0.0017,
-        "throughput_fps": 17400,
-        "chi2_stat": 4.2667,
-        "raw_p_val": 0.03886710381241724,
-        "status": "OPTIMAL",
-        "adj_p_val": 0.15547,
-        "stat_sig": false
-      },
-      {
-        "architecture": "Vanilla BiLSTM (No Attention)",
-        "tier": "Ablation Baseline",
-        "parameters": 587911,
-        "mmacs": 69.8,
-        "gflops": 1.18,
-        "accuracy": 88.07,
-        "macro_f1": 87.82,
-        "p50_latency_ms": 4.24,
-        "p95_latency_ms": 5.06,
-        "rtf": 0.0021,
-        "throughput_fps": 14100,
-        "chi2_stat": 9.3889,
-        "raw_p_val": 0.002183044737362255,
-        "status": "DEGRADED",
-        "adj_p_val": 0.01092,
-        "stat_sig": true
-      }
-    ],
-    "per_class": {
-      "baba": {
-        "precision": 95.2,
-        "recall": 100.0,
-        "f1": 97.5
-      },
-      "habari": {
-        "precision": 100.0,
-        "recall": 94.8,
-        "f1": 97.3
-      },
-      "hedhi": {
-        "precision": 94.3,
-        "recall": 94.3,
-        "f1": 94.3
-      },
-      "kula": {
-        "precision": 100.0,
-        "recall": 94.4,
-        "f1": 97.1
-      },
-      "mama": {
-        "precision": 94.5,
-        "recall": 99.8,
-        "f1": 97.1
-      },
-      "nenda": {
-        "precision": 94.7,
-        "recall": 94.7,
-        "f1": 94.7
-      },
-      "njema": {
-        "precision": 100.0,
-        "recall": 100.0,
-        "f1": 100.0
-      }
-    }
-  },
-  {
     "cycle": 40,
     "timestamp": "2026-09-28 22:59:03 UTC",
     "seed": 1787108063,
@@ -15996,6 +15836,166 @@
         "precision": 100.0,
         "recall": 100.0,
         "f1": 100.0
+      }
+    }
+  },
+  {
+    "cycle": 101,
+    "timestamp": "2026-10-27 11:42:27 UTC",
+    "seed": 1782704382,
+    "runner": "Linux",
+    "top_model": "BiLSTM + Attention (Proposed)",
+    "top_accuracy": 96.67,
+    "top_f1": 96.53,
+    "top_p95_latency": 5.08,
+    "top_gflops": 1.21,
+    "signer_drift": 2.46,
+    "anomaly": false,
+    "models": [
+      {
+        "architecture": "BiLSTM + Attention (Proposed)",
+        "tier": "Proposed Master Architecture",
+        "parameters": 604551,
+        "mmacs": 71.2,
+        "gflops": 1.21,
+        "accuracy": 96.67,
+        "macro_f1": 96.53,
+        "p50_latency_ms": 4.29,
+        "p95_latency_ms": 5.08,
+        "rtf": 0.0021,
+        "throughput_fps": 13980,
+        "chi2_stat": 0.0,
+        "raw_p_val": 1.0,
+        "status": "OPTIMAL",
+        "adj_p_val": 1.0,
+        "stat_sig": false
+      },
+      {
+        "architecture": "BiGRU + Additive Attention",
+        "tier": "Recurrent Baseline",
+        "parameters": 453120,
+        "mmacs": 53.4,
+        "gflops": 0.91,
+        "accuracy": 95.02,
+        "macro_f1": 94.79,
+        "p50_latency_ms": 3.82,
+        "p95_latency_ms": 4.51,
+        "rtf": 0.0019,
+        "throughput_fps": 15660,
+        "chi2_stat": 1.7778,
+        "raw_p_val": 0.18242243945173575,
+        "status": "OPTIMAL",
+        "adj_p_val": 0.29783,
+        "stat_sig": false
+      },
+      {
+        "architecture": "ST-GCN (Spatial-Temporal Graph)",
+        "tier": "Graph Convolution",
+        "parameters": 512800,
+        "mmacs": 49.8,
+        "gflops": 0.84,
+        "accuracy": 93.77,
+        "macro_f1": 93.43,
+        "p50_latency_ms": 7.01,
+        "p95_latency_ms": 8.21,
+        "rtf": 0.0035,
+        "throughput_fps": 8520,
+        "chi2_stat": 2.0833,
+        "raw_p_val": 0.14891467317876567,
+        "status": "OPTIMAL",
+        "adj_p_val": 0.29783,
+        "stat_sig": false
+      },
+      {
+        "architecture": "Transformer Sequence Encoder",
+        "tier": "Attention Baseline",
+        "parameters": 789400,
+        "mmacs": 86.5,
+        "gflops": 1.47,
+        "accuracy": 92.76,
+        "macro_f1": 92.44,
+        "p50_latency_ms": 5.37,
+        "p95_latency_ms": 6.44,
+        "rtf": 0.0027,
+        "throughput_fps": 11160,
+        "chi2_stat": 2.7692,
+        "raw_p_val": 0.0960923294556733,
+        "status": "OPTIMAL",
+        "adj_p_val": 0.28828,
+        "stat_sig": false
+      },
+      {
+        "architecture": "TCN (Temporal Convolutional Network)",
+        "tier": "Temporal Convolution",
+        "parameters": 342150,
+        "mmacs": 24.6,
+        "gflops": 0.42,
+        "accuracy": 91.08,
+        "macro_f1": 90.83,
+        "p50_latency_ms": 3.27,
+        "p95_latency_ms": 3.91,
+        "rtf": 0.0016,
+        "throughput_fps": 18300,
+        "chi2_stat": 4.2667,
+        "raw_p_val": 0.03886710381241724,
+        "status": "OPTIMAL",
+        "adj_p_val": 0.15547,
+        "stat_sig": false
+      },
+      {
+        "architecture": "Vanilla BiLSTM (No Attention)",
+        "tier": "Ablation Baseline",
+        "parameters": 587911,
+        "mmacs": 69.8,
+        "gflops": 1.18,
+        "accuracy": 87.74,
+        "macro_f1": 87.47,
+        "p50_latency_ms": 4.07,
+        "p95_latency_ms": 4.81,
+        "rtf": 0.002,
+        "throughput_fps": 14700,
+        "chi2_stat": 9.3889,
+        "raw_p_val": 0.002183044737362255,
+        "status": "DEGRADED",
+        "adj_p_val": 0.01092,
+        "stat_sig": true
+      }
+    ],
+    "per_class": {
+      "baba": {
+        "precision": 93.9,
+        "recall": 99.2,
+        "f1": 96.5
+      },
+      "habari": {
+        "precision": 100.0,
+        "recall": 94.7,
+        "f1": 97.3
+      },
+      "hedhi": {
+        "precision": 94.5,
+        "recall": 94.5,
+        "f1": 94.5
+      },
+      "kula": {
+        "precision": 100.0,
+        "recall": 94.7,
+        "f1": 97.3
+      },
+      "mama": {
+        "precision": 94.9,
+        "recall": 100.0,
+        "f1": 97.4
+      },
+      "nenda": {
+        "precision": 94.4,
+        "recall": 94.4,
+        "f1": 94.4
+      },
+      "njema": {
+        "precision": 99.8,
+        "recall": 99.8,
+        "f1": 99.8
       }
     }
   }
