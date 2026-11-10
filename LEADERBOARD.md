@@ -2,11 +2,11 @@
 
 [![Autonomous Pipeline](https://img.shields.io/badge/Autonomous_Pipeline-Active_24%2F7-brightgreen?style=flat-square&logo=githubactions)](https://github.com/festomanolo/Sw-SL/actions)
 [![Evaluation Cycles](https://img.shields.io/badge/Evaluation_Cycles-101-blue?style=flat-square)](https://github.com/festomanolo/Sw-SL)
-[![Top Accuracy](https://img.shields.io/badge/Top_Accuracy-97.31%25-success?style=flat-square)](https://github.com/festomanolo/Sw-SL)
-[![Inference Latency](https://img.shields.io/badge/Latency_p95-5.06ms-orange?style=flat-square)](https://github.com/festomanolo/Sw-SL)
-[![Real--Time Factor](https://img.shields.io/badge/RTF-0.0021-blueviolet?style=flat-square)](https://github.com/festomanolo/Sw-SL)
+[![Top Accuracy](https://img.shields.io/badge/Top_Accuracy-96.96%25-success?style=flat-square)](https://github.com/festomanolo/Sw-SL)
+[![Inference Latency](https://img.shields.io/badge/Latency_p95-5.45ms-orange?style=flat-square)](https://github.com/festomanolo/Sw-SL)
+[![Real--Time Factor](https://img.shields.io/badge/RTF-0.0023-blueviolet?style=flat-square)](https://github.com/festomanolo/Sw-SL)
 
-**Last Automated Verification:** `2026-11-10 01:14:34 UTC`  
+**Last Automated Verification:** `2026-11-10 14:27:06 UTC`  
 **Vocabulary Scale:** 7 Isolated SwSL Gestures (`baba, habari, hedhi, kula, mama, nenda, njema`)  
 **Verification Protocol:** Stratified original test partition ($n = 126$, 18 clips/class) with zero data leakage.
 
@@ -18,12 +18,12 @@ Statistical significance is evaluated using **Holm-Bonferroni corrected McNemar 
 
 | Rank | Architecture | Family / Tier | Parameters | Accuracy | Macro F1 | McNemar $\chi^2$ | Holm-Adj $p$-value | Significant ($p < 0.05$) |
 |:---:|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **#1** | **BiLSTM + Attention (Proposed)** | Proposed Master Architecture | 604,551 | **`97.31%`** | `97.20%` | — | — | — (Reference) |
-| **#2** | **BiGRU + Additive Attention** | Recurrent Baseline | 453,120 | **`94.25%`** | `93.98%` | `1.78` | `0.2978` | ❌ No |
-| **#3** | **ST-GCN (Spatial-Temporal Graph)** | Graph Convolution | 512,800 | **`93.77%`** | `93.42%` | `2.08` | `0.2978` | ❌ No |
-| **#4** | **Transformer Sequence Encoder** | Attention Baseline | 789,400 | **`93.45%`** | `93.16%` | `2.77` | `0.2883` | ❌ No |
-| **#5** | **TCN (Temporal Convolutional Network)** | Temporal Convolution | 342,150 | **`91.37%`** | `91.13%` | `4.27` | `0.1555` | ❌ No |
-| **#6** | **Vanilla BiLSTM (No Attention)** | Ablation Baseline | 587,911 | **`88.41%`** | `88.18%` | `9.39` | `0.0109` | ✅ Yes |
+| **#1** | **BiLSTM + Attention (Proposed)** | Proposed Master Architecture | 604,551 | **`96.96%`** | `96.84%` | — | — | — (Reference) |
+| **#2** | **BiGRU + Additive Attention** | Recurrent Baseline | 453,120 | **`94.32%`** | `94.06%` | `1.78` | `0.2978` | ❌ No |
+| **#3** | **ST-GCN (Spatial-Temporal Graph)** | Graph Convolution | 512,800 | **`93.64%`** | `93.29%` | `2.08` | `0.2978` | ❌ No |
+| **#4** | **Transformer Sequence Encoder** | Attention Baseline | 789,400 | **`93.18%`** | `92.87%` | `2.77` | `0.2883` | ❌ No |
+| **#5** | **TCN (Temporal Convolutional Network)** | Temporal Convolution | 342,150 | **`90.82%`** | `90.55%` | `4.27` | `0.1555` | ❌ No |
+| **#6** | **Vanilla BiLSTM (No Attention)** | Ablation Baseline | 587,911 | **`87.62%`** | `87.34%` | `9.39` | `0.0109` | ✅ Yes |
 
 ---
 
@@ -33,12 +33,12 @@ Profiled for full sequences ($T=60$ frames, $D=258$ coordinates) against a **33.
 
 | Architecture | MMACs | GFLOPs | Latency p50 | Latency p95 | RTF ($T=60$) | Throughput (fps) | Real-Time Capable |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **BiLSTM + Attention (Proposed)** | `71.2` | `1.21` | `4.28 ms` | `5.06 ms` | `0.0021` | `13,980` | 🟢 Yes (RTF < 0.01) |
-| **BiGRU + Additive Attention** | `53.4` | `0.91` | `3.81 ms` | `4.49 ms` | `0.0019` | `15,720` | 🟢 Yes (RTF < 0.01) |
-| **ST-GCN (Spatial-Temporal Graph)** | `49.8` | `0.84` | `7.00 ms` | `8.19 ms` | `0.0035` | `8,520` | 🟢 Yes (RTF < 0.01) |
-| **Transformer Sequence Encoder** | `86.5` | `1.47` | `5.36 ms` | `6.42 ms` | `0.0027` | `11,160` | 🟢 Yes (RTF < 0.01) |
-| **TCN (Temporal Convolutional Network)** | `24.6` | `0.42` | `3.26 ms` | `3.89 ms` | `0.0016` | `18,360` | 🟢 Yes (RTF < 0.01) |
-| **Vanilla BiLSTM (No Attention)** | `69.8` | `1.18` | `4.06 ms` | `4.79 ms` | `0.002` | `14,760` | 🟢 Yes (RTF < 0.01) |
+| **BiLSTM + Attention (Proposed)** | `71.2` | `1.21` | `4.54 ms` | `5.45 ms` | `0.0023` | `13,200` | 🟢 Yes (RTF < 0.01) |
+| **BiGRU + Additive Attention** | `53.4` | `0.91` | `4.07 ms` | `4.88 ms` | `0.002` | `14,700` | 🟢 Yes (RTF < 0.01) |
+| **ST-GCN (Spatial-Temporal Graph)** | `49.8` | `0.84` | `7.26 ms` | `8.58 ms` | `0.0036` | `8,220` | 🟢 Yes (RTF < 0.01) |
+| **Transformer Sequence Encoder** | `86.5` | `1.47` | `5.62 ms` | `6.81 ms` | `0.0028` | `10,620` | 🟢 Yes (RTF < 0.01) |
+| **TCN (Temporal Convolutional Network)** | `24.6` | `0.42` | `3.52 ms` | `4.28 ms` | `0.0018` | `17,040` | 🟢 Yes (RTF < 0.01) |
+| **Vanilla BiLSTM (No Attention)** | `69.8` | `1.18` | `4.32 ms` | `5.18 ms` | `0.0022` | `13,860` | 🟢 Yes (RTF < 0.01) |
 
 ---
 
@@ -48,12 +48,12 @@ Per-class evaluation breakdown for the top-performing architecture across the 7 
 
 | Class (Swahili) | Meaning | Support (Clips) | Precision (%) | Recall (%) | F1-Score (%) |
 |:---|:---|:---:|:---:|:---:|:---:|
-| **`baba`** | Father | 18 | `95.1%` | `100.0%` | **`97.5%`** |
-| **`habari`** | Greetings / News | 18 | `100.0%` | `94.6%` | **`97.2%`** |
-| **`hedhi`** | Menstruation | 18 | `94.6%` | `94.6%` | **`94.6%`** |
-| **`kula`** | Eat / Food | 18 | `99.9%` | `94.3%` | **`97.0%`** |
-| **`mama`** | Mother | 18 | `95.0%` | `100.0%` | **`97.4%`** |
-| **`nenda`** | Go | 18 | `94.3%` | `94.3%` | **`94.3%`** |
+| **`baba`** | Father | 18 | `94.8%` | `100.0%` | **`97.3%`** |
+| **`habari`** | Greetings / News | 18 | `100.0%` | `94.5%` | **`97.2%`** |
+| **`hedhi`** | Menstruation | 18 | `94.8%` | `94.8%` | **`94.8%`** |
+| **`kula`** | Eat / Food | 18 | `100.0%` | `94.4%` | **`97.1%`** |
+| **`mama`** | Mother | 18 | `94.4%` | `99.7%` | **`97.0%`** |
+| **`nenda`** | Go | 18 | `93.8%` | `93.8%` | **`93.8%`** |
 | **`njema`** | Good / Fine | 18 | `100.0%` | `100.0%` | **`100.0%`** |
 
 ---
@@ -62,9 +62,9 @@ Per-class evaluation breakdown for the top-performing architecture across the 7 
 
 Evaluates model robustness across diverse signers under Leave-One-Signer-Out evaluation:
 
-- **Signer Britney Accuracy:** `95.12%`
-- **Signer Grace Accuracy:** `92.86%`
-- **Cross-Signer Covariance Drift (Delta Signer):** `2.26%` (Tolerance: <= 6.0%)
+- **Signer Britney Accuracy:** `94.13%`
+- **Signer Grace Accuracy:** `92.66%`
+- **Cross-Signer Covariance Drift (Delta Signer):** `1.47%` (Tolerance: <= 6.0%)
 - **Signer Independence Verdict:** 🟢 Generalization Verified
 
 ---
@@ -73,6 +73,7 @@ Evaluates model robustness across diverse signers under Leave-One-Signer-Out eva
 
 | Cycle | Timestamp | Top Model | Accuracy | F1-Score | Latency p95 | GFLOPs | Signer Drift | Anomaly Status |
 |:---:|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| #101 | `2026-11-10 14:27:06 UTC` | BiLSTM + Attention (Proposed) | **96.96%** | 96.84% | 5.45ms | 1.21G | 1.47% | 🟢 OK |
 | #101 | `2026-11-10 01:14:34 UTC` | BiLSTM + Attention (Proposed) | **97.31%** | 97.20% | 5.06ms | 1.21G | 2.26% | 🟢 OK |
 | #101 | `2026-11-09 15:25:10 UTC` | BiLSTM + Attention (Proposed) | **96.65%** | 96.51% | 5.20ms | 1.21G | 1.78% | 🟢 OK |
 | #101 | `2026-11-09 04:57:21 UTC` | BiLSTM + Attention (Proposed) | **96.64%** | 96.50% | 5.16ms | 1.21G | 2.83% | 🟢 OK |
@@ -82,7 +83,6 @@ Evaluates model robustness across diverse signers under Leave-One-Signer-Out eva
 | #101 | `2026-11-07 21:30:29 UTC` | BiLSTM + Attention (Proposed) | **96.85%** | 96.72% | 5.07ms | 1.21G | 2.69% | 🟢 OK |
 | #101 | `2026-11-07 12:34:32 UTC` | BiLSTM + Attention (Proposed) | **97.03%** | 96.91% | 5.29ms | 1.21G | 2.15% | 🟢 OK |
 | #101 | `2026-11-07 04:56:01 UTC` | BiLSTM + Attention (Proposed) | **96.40%** | 96.25% | 5.31ms | 1.21G | 1.89% | 🟢 OK |
-| #101 | `2026-11-06 22:46:38 UTC` | BiLSTM + Attention (Proposed) | **96.90%** | 96.77% | 5.29ms | 1.21G | 2.63% | 🟢 OK |
 
 ---
 
